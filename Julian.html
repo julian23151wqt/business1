@@ -1,0 +1,236 @@
+<html> 
+
+<head>
+    
+
+    <style>
+    
+        body{
+    
+    font-family:tahoma;
+    text-align:center;
+        }
+        
+        header{
+            
+            letter-spacing: 6px;
+            color: white;
+            background:royalblue;
+            padding: 20px;
+        
+               }
+        h2{font-size: 25px;}
+        .container {
+            display:flex;
+            justify-content: center;
+        }
+        container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            border: 1px solid #ccc;
+            background-color: royalblue;
+            margin: 25px;
+            padding: 25px;
+            box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
+        }
+        @media screen and (min-width:50px)  {
+            .card {
+                flex-basis: 325px;
+            }
+            header h1 {
+                font-size: 30px;
+            }
+        }
+        .icons {
+            font-size: 8px;
+            padding: 25px;
+        }
+        button, .button{
+            background: royalblue;
+            border: 0px;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 3px;
+        }
+        td{
+            padding: 10px;
+        }
+        table{
+            margin: auto;
+        }
+        #my-order{
+            background-color: #29C1C4;
+            padding: 25px;
+            display: none;
+        }
+        
+        
+        
+    </style>    
+    
+    
+    
+</head>  
+    
+    
+<body>
+
+<header>
+    
+    
+    <h1>
+    Awesome INC
+    
+    </h1>
+    
+    <h4>
+    
+   Awesome 
+        
+    </h4>
+    
+    </header>
+
+
+    
+    
+    
+<section>
+    <h2>
+    Welcome
+    </h2>
+    <p>This website is about awesome things and awesome people
+    </p>
+    
+    <p>Our vision is too be awesome
+    </p>
+    <br>
+    <br>
+    <p>About us: Founded in febuary 2021 by Julian Hartinger
+    </p>
+    
+    <section class="container" style="background-color: deeppink;">
+    <article class="card"> 
+        <h3>Rupesh Patel</h3>
+        <div class="icons"> &#10084;
+        </div>
+        <div class="icons">&#x1F60E;</div>
+        <p>Jnr. Webdeveloper rupesh patel, up and coming website designer</p>
+        <button>Contact</button>
+        </article>
+    
+        <article>  
+            <h3>Dylan Facer</h3>
+            <p>Snr. Webdeveloper Dylan Facer a superb developer who makes fantastic websites</p>
+       <button>Contact</button>
+        </article>
+                
+        <article>  </article>
+    </section>
+
+    
+    <section class="container">
+    
+    <article>  </article>
+    <article>  </article>
+    
+    </section>
+            <section>
+    <h2>My Order Form</h2>
+    
+    </section>
+<form id="my-form">
+    <table>
+    <tr>
+    <td>Name:</td>
+    <td> <input type="text" size="25" name="my-name"></td>
+        </tr>
+    
+    <tr>
+        <td>Adress:</td>
+        <td><input type="text" size="25" name="my-adress"></td>
+    </tr>
+         
+        <tr>
+    <td>Favorite Drink:</td>
+    <td> <select name="my-drink">
+                <option> Milk Tea </option>
+                <option> Coke</option>
+                <option> Coffee</option>
+                <option> Monster</option>
+        </select>
+        </td>
+    </tr>
+        
+    <tr>
+    <td>Quantity:</td>
+    <td><input type="number"  name="my-qty" value="1" min="1" max="5"></td> <small>Max 5</small>
+    </tr>
+     
+        <tr>
+        <br>
+        </tr>
+        
+        <tr>
+        <td colspan="3">
+        <input class="button"
+            type="button"
+            value="Process Order">
+            <input class="button" type="reset" value="Clear"
+                   type="button"
+                   value="process order"
+                          onclick="placeOrder0();">
+            
+        </td>    
+        </tr>
+        
+        
+    </table>
+    <div id="my-order">
+    </div>
+    <form>
+    <h1>Interesting FORM</h1>
+    <br>
+    <input type="text" size="50"
+    <br><br>
+    <button>Submit</button>
+    </form>
+   
+    
+    
+        <form
+         id="my-form"     
+         action="me.html"  
+         target="_blank"      
+         ></form>
+
+    
+
+    
+    
+    <script>
+    Javascript Code
+    
+    function placeOrder(){
+        var orderForm = document.getElementById("my-form");
+        results = "<h3>Success!</h3>Here is your order.";
+        results +="<br>Name: " + orderForm.elements["my-name"].value;
+        results += "<br>Adress:" + orderForm.elements["my-adress"].value;
+        results += "<br>I like to order: " + orderForm.elements["my-drink"].value;
+        results += "<br>Quantity: " + orderForm.elements["my-qty"].value;
+        var orderResults = document.getElementById("my-order");
+        orderResults.style.display = "block";
+        orderResults.innerHTML = results;
+    }
+    </script>
+</body>
+
+
+
+
+</html>
+
